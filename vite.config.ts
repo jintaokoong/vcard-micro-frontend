@@ -3,6 +3,9 @@ import solidPlugin from 'vite-plugin-solid';
 import WindiCSS from 'vite-plugin-windicss';
 
 export default defineConfig({
+  server: {
+    port: 3200,
+  },
   plugins: [
     solidPlugin(),
     WindiCSS({

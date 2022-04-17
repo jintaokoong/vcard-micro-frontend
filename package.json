@@ -17,6 +17,7 @@
     "vite-plugin-windicss": "^1.8.3"
   },
   "dependencies": {
+    "@types/ramda": "^0.28.11",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "@typescript-eslint/parser": "^5.19.0",
     "ramda": "^0.28.0",

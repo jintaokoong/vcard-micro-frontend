@@ -1,4 +1,4 @@
-type Optional<T> = T | undefined;
+import { Optional } from './shared/optional';
 
 export interface Address {
   label: Optional<string>;
