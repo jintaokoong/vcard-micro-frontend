@@ -1,5 +1,3 @@
-import { Link } from 'solid-app-router';
-
 const NotFound = () => {
   return (
     <>

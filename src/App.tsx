@@ -5,7 +5,7 @@ import NotFound from './pages/not-found';
 
 const App: Component = () => {
   return (
-    <div class={'container mx-auto'}>
+    <div class={'container mx-auto md:max-w-lg'}>
       <Routes>
         <Route path={'/:id'} element={<Card />} />
         <Route path={'/404'} element={<NotFound />} />
