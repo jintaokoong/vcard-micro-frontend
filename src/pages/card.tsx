@@ -4,7 +4,7 @@ import FieldEntry from '../components/field-entry';
 export const Card = () => {
   return (
     <>
-      <div class={'px-2'}>
+      <div class={'px-2 pb-16'}>
         <div class={'flex flex-col items-center px-8 pt-8'}>
           <div class={'mb-2'}>
             <IoPersonCircle size={80} />
@@ -19,6 +19,26 @@ export const Card = () => {
           <FieldEntry label={'address'} value={'some address'} />
         </div>
         <hr class={'my-8'} />
+        <div>
+          <h4 class={'mb-2 font-medium'}>Work Info</h4>
+          <FieldEntry label={'address'} value={'some address'} />
+          <FieldEntry label={'address'} value={'some address'} />
+          <FieldEntry label={'email'} value={'john@abc.com'} />
+          <FieldEntry label={'contact'} value={'0123456789'} />
+          <FieldEntry label={'address'} value={'some address'} />
+        </div>
+        <hr class={'my-8'} />
+        <div class={'mb-4'}>
+          <div class={'mb-1.5 text-sm capitalize'}>Notes</div>
+          <textarea
+            rows={3}
+            readOnly
+            value={''}
+            class={
+              'p-2 w-full text-md bg-gray-500 rounded-md resize-none focus:outline-transparent'
+            }
+          />
+        </div>
       </div>
       <div
         class={'w-inherit w-max-inherit fixed bottom-3 active:bottom-2 px-2'}
