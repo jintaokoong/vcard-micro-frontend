@@ -1,4 +1,5 @@
 import { IoDownload, IoPersonCircle } from 'solid-icons/io';
+import FieldEntry from '../components/field-entry';
 
 export const Card = () => {
   return (
@@ -8,6 +9,13 @@ export const Card = () => {
           <IoPersonCircle size={80} />
         </div>
         <div class={'text-2xl font-medium'}>John Doe</div>
+      </div>
+      <hr class={'my-8'} />
+      <div>
+        <h4 class={'mb-2 font-medium'}>Personal Info</h4>
+        <FieldEntry label={'email'} value={'john.doe@mail.net'} />
+        <FieldEntry label={'contact'} value={'0123456789'} />
+        <FieldEntry label={'address'} value={'some address'} />
       </div>
       <hr class={'my-8'} />
       <div
