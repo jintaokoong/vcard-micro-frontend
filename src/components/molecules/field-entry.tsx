@@ -1,5 +1,5 @@
 import { defaultTo } from 'ramda';
-import Label from './label';
+import Label from '../atoms/label';
 
 interface Prop {
   label?: string;
