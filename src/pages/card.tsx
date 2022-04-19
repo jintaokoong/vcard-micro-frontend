@@ -67,7 +67,7 @@ export const Card = () => {
 
   return (
     <>
-      <div class={'px-2 pb-14'}>
+      <div class={'px-2 pb-15'}>
         <div class={'flex flex-col items-center px-8 pt-8'}>
           <div class={'mb-2'}>
             <IoPersonCircle size={80} />
@@ -85,6 +85,21 @@ export const Card = () => {
           </Show>
         </div>
         <hr class={'my-8'} />
+        <div>
+          <h4 class={'mb-2 font-medium'}>Work Info</h4>
+          <FieldEntry label={'email'} value={card()?.workEmail} />
+          <FieldEntry label={'contact'} value={card()?.workContact} />
+          <Label>Address</Label>
+          <textarea
+            rows={3}
+            readOnly
+            value={defaultEmpty(concatAddress(card()?.workAddress))}
+            class={
+              'p-2 w-full text-md bg-gray-500 rounded-md resize-none focus:outline-transparent'
+            }
+          />
+          <hr class={'my-8'} />
+        </div>
         <Show
           when={or(
             any((field) => Boolean(field))([card()?.email, card()?.contact]),
@@ -107,22 +122,7 @@ export const Card = () => {
           </div>
           <hr class={'my-8'} />
         </Show>
-        <div>
-          <h4 class={'mb-2 font-medium'}>Work Info</h4>
-          <FieldEntry label={'email'} value={card()?.workEmail} />
-          <FieldEntry label={'contact'} value={card()?.workContact} />
-          <Label>Address</Label>
-          <textarea
-            rows={3}
-            readOnly
-            value={defaultEmpty(concatAddress(card()?.workAddress))}
-            class={
-              'p-2 w-full text-md bg-gray-500 rounded-md resize-none focus:outline-transparent'
-            }
-          />
-        </div>
         <Show when={card()?.notes}>
-          <hr class={'my-8'} />
           <div class={'mb-4'}>
             <div class={'mb-1.5 text-sm capitalize'}>Notes</div>
             <textarea
