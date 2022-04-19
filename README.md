@@ -1,14 +1,24 @@
+# VCard Micro Frontend
+
+<a href="https://gitmoji.dev">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg" alt="Gitmoji">
+</a>
+<a>
+  <img src="https://img.shields.io/static/v1?label=code&message=SolidJs&color=blue&logo=Solid" />
+</a>
+
+## About
+
+VCard Micro Frontend is a micro site written to serve and display data for a specific vcard from the backend.
+
+View <a href="https://github.com/jintaokoong/vcard-backend">vcard-backend</a> more information on the backend. 
+
 ## Usage
-
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
-
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
 
 ```bash
 $ npm install # or pnpm install or yarn install
+$ npm run dev # or pnpm dev or yarn dev
 ```
-
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
 
 ## Available Scripts
 
