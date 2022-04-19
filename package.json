@@ -4,13 +4,18 @@
   "description": "",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "clean": "rimraf dist/",
+    "copy": "copyfiles netlify.toml dist/",
+    "build": "npm run clean && vite build",
+    "bootstrap": "npm run build && npm run copy",
     "serve": "vite preview"
   },
   "license": "MIT",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "eslint": "^8.13.0",
     "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.3",
     "vite": "^2.8.6",
     "vite-plugin-solid": "^2.2.6",
