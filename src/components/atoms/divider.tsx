@@ -1,3 +1,3 @@
-const Divider = () => <hr class={'my-8 last:hidden'} />;
+const Divider = () => <hr class={'my-6 last:hidden'} />;
 
 export default Divider;
