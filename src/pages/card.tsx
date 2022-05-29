@@ -14,7 +14,7 @@ import DownloadButton from '../components/molecules/download-button';
 const fetchCard = (id: string) =>
   fetch(`${import.meta.env.VITE_APP_API_BASE_URL}/cards/${id}`)
     .then((res) => {
-      if (res.status !== 200) throw new Error('not found :(');
+      if (!res.ok) throw new Error('not found');
       return res.json();
     })
     .then((body) => body.data);
@@ -27,13 +27,13 @@ export const Card = () => {
   const [card] = createResource<Vcard, string>(() => params.id, fetchCard);
 
   createEffect(() => {
-    if (card.error !== undefined) {
+    if (card.error) {
       navigate('/404');
     }
   });
 
   return (
-    <>
+    <Show when={!card.error}>
       <div class={'px-2 pb-15'}>
         <ProfileSummary
           firstName={card()?.firstName}
@@ -68,6 +68,6 @@ export const Card = () => {
         </Show>
       </div>
       <DownloadButton id={params.id} />
-    </>
+    </Show>
   );
 };
