@@ -32,7 +32,7 @@ const ProfileSummary = (p: Props) => {
         <div class={'capitalize text-center'}>{p.title}</div>
       </Show>
       <Show when={p.organization}>
-        <div class={'text-xl capitalize text-center'}>{p.organization}</div>
+        <div class={'text-xl text-center'}>{p.organization}</div>
       </Show>
     </div>
   );
